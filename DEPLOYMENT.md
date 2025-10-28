@@ -1,6 +1,6 @@
-# 🚀 Moemoji Production Deployment Guide
+# 🚀 GWIN TECH Production Deployment Guide
 
-This guide will help you deploy your Moemoji landing page to production and make it accessible to potential clients worldwide.
+This guide will help you deploy your GWIN TECH landing page to production and make it accessible to potential clients worldwide.
 
 ## 🎯 Pre-Deployment Checklist
 
@@ -19,7 +19,24 @@ This guide will help you deploy your Moemoji landing page to production and make
 
 ## 🌐 Deployment Options
 
-### Option 1: Netlify (Recommended - Free & Easy)
+### Option 1: DigitalOcean App Platform (Recommended for Production)
+
+**See detailed guide:** [DIGITALOCEAN_DEPLOYMENT.md](./DIGITALOCEAN_DEPLOYMENT.md)
+
+**Quick Start:**
+1. Push code to GitHub: https://github.com/samarato/gwintech
+2. Go to DigitalOcean App Platform
+3. Create new app from GitHub repository
+4. Use provided app spec (`.do/app.yaml`)
+5. Deploy and get your live URL
+
+**Build Command:** `npm install && npm run build`
+**Run Command:** `npm start`
+**Port:** 8080
+
+**Cost:** Starting at $5/month (Basic plan)
+
+### Option 2: Netlify (Alternative - Free & Easy)
 
 1. **Build the project:**
    ```bash
@@ -32,7 +49,7 @@ This guide will help you deploy your Moemoji landing page to production and make
    - Or connect your GitHub repository for automatic deployments
 
 3. **Custom Domain:**
-   - Add your custom domain `moemoji.com`
+   - Add your custom domain `gwintech.co.th`
    - Netlify provides free SSL certificates
    - DNS configuration will be provided
 
@@ -48,7 +65,19 @@ This guide will help you deploy your Moemoji landing page to production and make
    vercel --prod
    ```
 
-### Option 3: Traditional Hosting (cPanel/FTP)
+### Option 3: Vercel (Alternative - Free)
+
+1. **Install Vercel CLI:**
+   ```bash
+   npm install -g vercel
+   ```
+
+2. **Deploy:**
+   ```bash
+   vercel --prod
+   ```
+
+### Option 4: Traditional Hosting (cPanel/FTP)
 
 1. **Build the project:**
    ```bash
@@ -168,16 +197,16 @@ npm install --save-dev @vite-pwa/assets-generator
 - ✅ Responsive design
 
 ### Messaging:
-- ✅ "Where Cute Meets Professional"
-- ✅ Japanese cultural elements
+- ✅ "Where Innovation Meets Excellence"
+- ✅ Professional IT services
 - ✅ Technical expertise emphasis
-- ✅ Unique value proposition
+- ✅ Bangkok, Thailand based
 
 ## 📞 Client Acquisition Strategy
 
 ### Immediate Actions:
 1. **Professional Email:**
-   - Set up hello@moemoji.com
+   - Set up info@gwintech.co
    - Professional email signature
 
 2. **Business Cards:**
@@ -249,8 +278,18 @@ npm install --save-dev @vite-pwa/assets-generator
 
 ## 🎉 Ready to Launch!
 
-Your Moemoji website is production-ready and optimized for success. The unique combination of anime-inspired design with professional IT services will definitely make you stand out in the market!
+Your GWIN TECH website is production-ready and optimized for success. The professional IT services platform with MojiChat omnichannel AI chatbot will help you stand out in the Bangkok tech market!
+
+**Important Files:**
+- **DigitalOcean Guide:** [DIGITALOCEAN_DEPLOYMENT.md](./DIGITALOCEAN_DEPLOYMENT.md)
+- **App Spec:** `.do/app.yaml`
+- **Package Config:** `package.json` (includes start script)
+
+**Contact:**
+- Email: info@gwintech.co
+- Phone: +66 98 828 4666
+- Location: Bangkok, Thailand
 
 **Remember:** Consistency is key. Maintain the same level of quality and attention to detail in your client interactions as you've put into this website.
 
-Good luck with your business! 🚀✨ 
+Good luck with your business! 🚀 
