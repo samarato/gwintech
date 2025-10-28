@@ -23,23 +23,23 @@ const Header: React.FC = () => {
   ]
 
   return (
-    <header 
+    <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? 'bg-white/95 backdrop-blur-md shadow-lg' 
-          : 'bg-transparent'
+        isScrolled
+          ? 'bg-white/95 backdrop-blur-md shadow-lg'
+          : 'bg-white/90 md:bg-transparent backdrop-blur-sm md:backdrop-blur-none'
       }`}
     >
-      <div className="container-custom">
-        <div className="flex items-center justify-between h-16 md:h-20">
+      <div className="container-custom px-4">
+        <div className="flex items-center justify-between h-14 md:h-16 lg:h-20">
           {/* Logo */}
-          <a href="#home" className="flex items-center space-x-2">
+          <a href="#home" className="flex items-center space-x-2 flex-shrink-0">
             <img
               src="/icons/gwintechicon500.png"
               alt="GWIN TECH Logo"
-              className="w-8 h-8 md:w-10 md:h-10 object-contain"
+              className="w-7 h-7 md:w-9 md:h-9 lg:w-10 lg:h-10 object-contain"
             />
-            <span className="text-xl md:text-2xl font-display font-bold gradient-text">
+            <span className="text-lg md:text-xl lg:text-2xl font-display font-bold gradient-text whitespace-nowrap">
               GWIN TECH
             </span>
           </a>
