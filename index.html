@@ -50,8 +50,28 @@
         welcomeMessage: 'How can we help you today?',
         primaryColor: '#3b82f6'
       };
+      console.log('MojiChat config loaded:', window.mojiChatConfig);
     </script>
-    <script src="https://overtimorous-honeyedly-gisela.ngrok-free.dev/widget/mojichat-widget.js" async></script>
+    <script>
+      // Load MojiChat widget with error handling
+      (function() {
+        var script = document.createElement('script');
+        script.src = 'https://overtimorous-honeyedly-gisela.ngrok-free.dev/widget/mojichat-widget.js';
+        script.async = true;
+
+        script.onload = function() {
+          console.log('MojiChat widget script loaded successfully');
+        };
+
+        script.onerror = function() {
+          console.error('Failed to load MojiChat widget script from:', script.src);
+          console.error('Please check if the ngrok URL is active and accessible');
+        };
+
+        document.body.appendChild(script);
+        console.log('Loading MojiChat widget from:', script.src);
+      })();
+    </script>
     <!-- End MojiChat Web Widget -->
   </body>
 </html> 
