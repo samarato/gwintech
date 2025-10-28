@@ -49,7 +49,7 @@ const Features: React.FC = () => {
   ]
 
   return (
-    <section id="features" className="section-padding bg-gradient-to-br from-gray-50 to-white">
+    <section id="features" className="section-padding bg-gradient-to-br from-gray-50 to-white overflow-hidden">
       <div className="container-custom">
         <motion.div
           ref={ref}

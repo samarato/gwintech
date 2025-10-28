@@ -32,7 +32,7 @@ const Footer: React.FC = () => {
   ]
 
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-gray-900 text-white overflow-hidden">
       <div className="container-custom py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
@@ -55,16 +55,16 @@ const Footer: React.FC = () => {
             
             <div className="space-y-3">
               <div className="flex items-center space-x-3 text-gray-300">
-                <Mail className="w-5 h-5" />
-                <span>info@gwintech.co</span>
+                <Mail className="w-5 h-5 flex-shrink-0" />
+                <span className="break-words">info@gwintech.co</span>
               </div>
               <div className="flex items-center space-x-3 text-gray-300">
-                <Phone className="w-5 h-5" />
-                <span>+66 98 828 4666</span>
+                <Phone className="w-5 h-5 flex-shrink-0" />
+                <span className="break-words">+66 98 828 4666</span>
               </div>
-              <div className="flex items-center space-x-3 text-gray-300">
-                <MapPin className="w-5 h-5" />
-                <span>752/58 Khum Thong-Lam Toi Ting Rd, Lat Krabang, Bangkok</span>
+              <div className="flex items-start space-x-3 text-gray-300">
+                <MapPin className="w-5 h-5 flex-shrink-0 mt-0.5" />
+                <span className="break-words text-sm md:text-base">752/58 Khum Thong-Lam Toi Ting Rd, Lat Krabang, Bangkok</span>
               </div>
             </div>
           </div>

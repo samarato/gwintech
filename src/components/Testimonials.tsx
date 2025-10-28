@@ -44,7 +44,7 @@ const Testimonials: React.FC = () => {
   ]
 
   return (
-    <section className="section-padding bg-gradient-to-br from-gray-50 to-white">
+    <section className="section-padding bg-gradient-to-br from-gray-50 to-white overflow-hidden">
       <div className="container-custom">
         <motion.div
           ref={ref}

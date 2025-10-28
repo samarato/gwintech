@@ -94,29 +94,29 @@ const Services: React.FC = () => {
   ];
 
   return (
-    <section id="services" className="py-20 bg-gray-50">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+    <section id="services" className="py-20 bg-gray-50 overflow-hidden">
+      <div className="container-custom">
+        <div className="text-center mb-16 px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Our <span className="text-moe-pink">Services</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-base md:text-xl text-gray-600 max-w-3xl mx-auto">
             We provide comprehensive technology solutions with a focus on innovation, 
             quality, and customer satisfaction. From infrastructure to AI, we've got you covered.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {services.map((service, index) => {
             const Icon = service.icon;
             const isMojiChat = service.title === "MojiChat AI Chatbot";
             return (
               <div
                 key={index}
-                className={`bg-gradient-to-br ${service.bgGradient} p-8 rounded-xl border ${service.borderColor} hover:shadow-lg transition-all duration-300 hover:scale-105`}
+                className={`bg-gradient-to-br ${service.bgGradient} p-6 md:p-8 rounded-xl border ${service.borderColor} hover:shadow-lg transition-all duration-300 md:hover:scale-105`}
               >
-                <div className="flex items-center mb-6">
-                  <div className={`p-3 rounded-lg bg-gradient-to-r ${service.gradient} mr-4 flex items-center justify-center`}>
+                <div className="flex items-center mb-6 flex-wrap">
+                  <div className={`p-3 rounded-lg bg-gradient-to-r ${service.gradient} mr-3 md:mr-4 flex items-center justify-center flex-shrink-0`}>
                     {isMojiChat ? (
                       <img
                         src="/icons/mojiChatIcon.png"
@@ -127,18 +127,18 @@ const Services: React.FC = () => {
                       <Icon className="h-8 w-8 text-white" />
                     )}
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900">{service.title}</h3>
+                  <h3 className="text-xl md:text-2xl font-bold text-gray-900 break-words">{service.title}</h3>
                 </div>
                 
-                <p className="text-gray-600 mb-6 leading-relaxed">
+                <p className="text-sm md:text-base text-gray-600 mb-6 leading-relaxed">
                   {service.description}
                 </p>
                 
                 <div className="space-y-3 mb-6">
                   {service.features.map((feature, featureIndex) => (
-                    <div key={featureIndex} className="flex items-center">
-                      <div className="w-2 h-2 bg-gradient-to-r from-moe-pink to-moe-purple rounded-full mr-3"></div>
-                      <span className="text-gray-700">{feature}</span>
+                    <div key={featureIndex} className="flex items-start">
+                      <div className="w-2 h-2 bg-gradient-to-r from-moe-pink to-moe-purple rounded-full mr-3 mt-1.5 flex-shrink-0"></div>
+                      <span className="text-sm md:text-base text-gray-700 break-words">{feature}</span>
                     </div>
                   ))}
                 </div>
