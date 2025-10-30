@@ -44,34 +44,10 @@
     <!-- MojiChat Web Widget -->
     <script>
       window.mojiChatConfig = {
-        channelToken: '0xMgxBVMWura6_xpzAKxK0Egr2RcT49cdANCk42J0CA',
-        apiUrl: 'https://webwidget.ngrok.app',
-        title: 'Chat with us',
-        welcomeMessage: 'How can we help you today?',
-        primaryColor: '#3b82f6'
+        channelToken: '0xMgxBVMWura6_xpzAKxK0Egr2RcT49cdANCk42J0CA'
       };
-      console.log('MojiChat config loaded:', window.mojiChatConfig);
     </script>
-    <script>
-      // Load MojiChat widget with error handling
-      (function() {
-        var script = document.createElement('script');
-        script.src = 'https://webwidget.ngrok.app/widget/mojichat-widget.js';
-        script.async = true;
-
-        script.onload = function() {
-          console.log('MojiChat widget script loaded successfully');
-        };
-
-        script.onerror = function() {
-          console.error('Failed to load MojiChat widget script from:', script.src);
-          console.error('Please check if the ngrok URL is active and accessible');
-        };
-
-        document.body.appendChild(script);
-        console.log('Loading MojiChat widget from:', script.src);
-      })();
-    </script>
+    <script src="https://webwidget.ngrok.app/widget/mojichat-widget.js" async></script>
     <!-- End MojiChat Web Widget -->
   </body>
 </html> 
