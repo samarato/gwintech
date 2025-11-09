@@ -36,7 +36,7 @@ const Header: React.FC = () => {
           <a href="#home" className="flex items-center space-x-2 flex-shrink-0">
             <img
               src="/icons/gwintechicon500.png"
-              alt="GWIN TECH Logo"
+              alt="GWIN TECH - Professional IT Services Company in Bangkok, Thailand"
               className="w-7 h-7 md:w-9 md:h-9 lg:w-10 lg:h-10 object-contain"
             />
             <span className="text-lg md:text-xl lg:text-2xl font-display font-bold gradient-text whitespace-nowrap">

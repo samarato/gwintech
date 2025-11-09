@@ -120,7 +120,7 @@ const Services: React.FC = () => {
                     {isMojiChat ? (
                       <img
                         src="/icons/mojiChatIcon.png"
-                        alt="MojiChat"
+                        alt="MojiChat - AI-powered omnichannel chatbot solution for customer engagement"
                         className="h-8 w-8 object-contain"
                       />
                     ) : (

@@ -113,7 +113,7 @@ const MojiChatDetail: React.FC<MojiChatDetailProps> = ({ isOpen, onClose }) => {
               <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-2xl flex items-center justify-center p-3">
                 <img
                   src="/icons/mojiChatIcon.png"
-                  alt="MojiChat Logo"
+                  alt="MojiChat AI Chatbot Platform - Enterprise omnichannel messaging solution"
                   className="w-full h-full object-contain"
                 />
               </div>
