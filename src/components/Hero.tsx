@@ -61,7 +61,7 @@ const Hero: React.FC = () => {
                     {isMojiChat ? (
                       <img
                         src="/icons/mojiChatIcon.png"
-                        alt="MojiChat"
+                        alt="MojiChat - Omnichannel AI Chatbot Platform for LINE, Facebook, Instagram, TikTok"
                         className="w-4 h-4 sm:w-5 sm:h-5 object-contain flex-shrink-0"
                       />
                     ) : (
