@@ -13,9 +13,9 @@ const SoftwareDevelopmentDetail: React.FC<SoftwareDevelopmentDetailProps> = ({ i
 
   const tabs = [
     { id: 'overview', label: 'Overview', icon: Code },
+    { id: 'mobile', label: 'Mobile Apps', icon: Smartphone },
     { id: 'sdlc', label: 'SDLC & Methodology', icon: Repeat },
     { id: 'agile', label: 'Agile & Scrum', icon: Target },
-    { id: 'uxui', label: 'UX/UI Design', icon: Palette },
     { id: 'techstack', label: 'Tech Stack', icon: Layers }
   ];
 
@@ -24,14 +24,14 @@ const SoftwareDevelopmentDetail: React.FC<SoftwareDevelopmentDetailProps> = ({ i
       <div className="text-center">
         <h2 className="text-3xl font-bold text-gray-900 mb-4">Software Development Excellence</h2>
         <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-          Full-stack development services with modern technologies, agile methodologies, and scalable architecture following industry best practices.
+          Full-stack development services with modern technologies including .NET C# 8-10, React, and mobile apps. We build native iOS/Android and cross-platform solutions with Flutter and React Native.
         </p>
       </div>
 
       <div className="grid md:grid-cols-2 gap-8">
         <div className="space-y-6">
           <h3 className="text-2xl font-semibold text-gray-900 mb-4">Development Expertise</h3>
-          
+
           <div className="space-y-4">
             <div className="flex items-start space-x-3">
               <Layers className="h-6 w-6 text-moe-pink mt-1 flex-shrink-0" />
@@ -40,23 +40,23 @@ const SoftwareDevelopmentDetail: React.FC<SoftwareDevelopmentDetailProps> = ({ i
                 <p className="text-gray-600">Domain-Driven Design with CQRS, Event Sourcing, and modular monolith patterns</p>
               </div>
             </div>
-            
+
             <div className="flex items-start space-x-3">
               <Code className="h-6 w-6 text-moe-purple mt-1 flex-shrink-0" />
               <div>
-                <h4 className="font-semibold text-gray-900">Full-Stack Development</h4>
-                <p className="text-gray-600">.NET 9, React 18, TypeScript, Node.js with modern frameworks and libraries</p>
+                <h4 className="font-semibold text-gray-900">.NET C# 8/9/10 & Python Backend</h4>
+                <p className="text-gray-600">ASP.NET Core, FastAPI, Entity Framework Core, and modern backend frameworks</p>
               </div>
             </div>
-            
+
             <div className="flex items-start space-x-3">
-              <Database className="h-6 w-6 text-moe-blue mt-1 flex-shrink-0" />
+              <Smartphone className="h-6 w-6 text-moe-blue mt-1 flex-shrink-0" />
               <div>
-                <h4 className="font-semibold text-gray-900">Database Design</h4>
-                <p className="text-gray-600">PostgreSQL, MongoDB, Redis, Entity Framework, and optimized data modeling</p>
+                <h4 className="font-semibold text-gray-900">Mobile App Development</h4>
+                <p className="text-gray-600">Native iOS (Swift), Android (Kotlin), Flutter, and React Native</p>
               </div>
             </div>
-            
+
             <div className="flex items-start space-x-3">
               <Shield className="h-6 w-6 text-moe-green mt-1 flex-shrink-0" />
               <div>
@@ -99,6 +99,160 @@ const SoftwareDevelopmentDetail: React.FC<SoftwareDevelopmentDetailProps> = ({ i
               <p className="text-sm text-gray-600">User-centered design with modern UI frameworks</p>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+  );
+
+  const renderMobile = () => (
+    <div className="space-y-8">
+      <div className="text-center">
+        <h2 className="text-3xl font-bold text-gray-900 mb-4">Mobile App Development</h2>
+        <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          Build powerful mobile applications with native performance or cross-platform efficiency. We deliver apps for iOS, Android, and beyond.
+        </p>
+      </div>
+
+      <div className="grid md:grid-cols-2 gap-8">
+        {/* Native Development */}
+        <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg p-6">
+          <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
+            <Smartphone className="h-6 w-6 text-blue-600 mr-2" />
+            Native App Development
+          </h3>
+          <div className="space-y-4">
+            <div className="bg-white rounded-lg p-4 border border-blue-200">
+              <h4 className="font-semibold text-gray-900 mb-2">iOS Development (Swift)</h4>
+              <ul className="text-sm text-gray-600 space-y-1">
+                <li>• Swift 5+ & SwiftUI</li>
+                <li>• UIKit for complex interfaces</li>
+                <li>• Core Data & CloudKit</li>
+                <li>• App Store optimization</li>
+                <li>• Push notifications & widgets</li>
+              </ul>
+            </div>
+            <div className="bg-white rounded-lg p-4 border border-blue-200">
+              <h4 className="font-semibold text-gray-900 mb-2">Android Development (Kotlin)</h4>
+              <ul className="text-sm text-gray-600 space-y-1">
+                <li>• Kotlin & Jetpack Compose</li>
+                <li>• Material Design 3</li>
+                <li>• Room Database & DataStore</li>
+                <li>• Google Play Services</li>
+                <li>• Background processing</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Cross-Platform Development */}
+        <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-lg p-6">
+          <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
+            <Globe className="h-6 w-6 text-purple-600 mr-2" />
+            Cross-Platform Development
+          </h3>
+          <div className="space-y-4">
+            <div className="bg-white rounded-lg p-4 border border-purple-200">
+              <h4 className="font-semibold text-gray-900 mb-2">Flutter</h4>
+              <ul className="text-sm text-gray-600 space-y-1">
+                <li>• Dart programming language</li>
+                <li>• Single codebase for iOS & Android</li>
+                <li>• Beautiful custom UI widgets</li>
+                <li>• Hot reload for fast development</li>
+                <li>• Native performance</li>
+              </ul>
+            </div>
+            <div className="bg-white rounded-lg p-4 border border-purple-200">
+              <h4 className="font-semibold text-gray-900 mb-2">React Native</h4>
+              <ul className="text-sm text-gray-600 space-y-1">
+                <li>• JavaScript/TypeScript</li>
+                <li>• Reuse web development skills</li>
+                <li>• Large ecosystem & community</li>
+                <li>• Native modules integration</li>
+                <li>• Expo for rapid prototyping</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Mobile Features */}
+      <div className="bg-gray-50 rounded-lg p-6">
+        <h3 className="text-xl font-semibold text-gray-900 mb-4">Mobile App Features We Build</h3>
+        <div className="grid md:grid-cols-4 gap-4">
+          <div className="bg-white rounded-lg p-4 border border-gray-200 text-center">
+            <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-3">
+              <Shield className="h-6 w-6 text-blue-600" />
+            </div>
+            <h4 className="font-semibold text-gray-900 mb-1">Authentication</h4>
+            <p className="text-xs text-gray-600">Biometrics, SSO, OAuth</p>
+          </div>
+          <div className="bg-white rounded-lg p-4 border border-gray-200 text-center">
+            <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-3">
+              <Database className="h-6 w-6 text-green-600" />
+            </div>
+            <h4 className="font-semibold text-gray-900 mb-1">Offline Support</h4>
+            <p className="text-xs text-gray-600">Local storage & sync</p>
+          </div>
+          <div className="bg-white rounded-lg p-4 border border-gray-200 text-center">
+            <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-3">
+              <Zap className="h-6 w-6 text-purple-600" />
+            </div>
+            <h4 className="font-semibold text-gray-900 mb-1">Push Notifications</h4>
+            <p className="text-xs text-gray-600">FCM, APNs integration</p>
+          </div>
+          <div className="bg-white rounded-lg p-4 border border-gray-200 text-center">
+            <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mx-auto mb-3">
+              <Settings className="h-6 w-6 text-orange-600" />
+            </div>
+            <h4 className="font-semibold text-gray-900 mb-1">In-App Purchases</h4>
+            <p className="text-xs text-gray-600">Subscriptions & payments</p>
+          </div>
+        </div>
+      </div>
+
+      {/* When to Choose */}
+      <div className="grid md:grid-cols-2 gap-6">
+        <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-lg p-6 border border-green-200">
+          <h3 className="text-lg font-semibold text-gray-900 mb-3">Choose Native When:</h3>
+          <ul className="space-y-2 text-sm text-gray-600">
+            <li className="flex items-start">
+              <CheckCircle className="h-4 w-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+              <span>Maximum performance is critical</span>
+            </li>
+            <li className="flex items-start">
+              <CheckCircle className="h-4 w-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+              <span>Deep platform integration needed</span>
+            </li>
+            <li className="flex items-start">
+              <CheckCircle className="h-4 w-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+              <span>Complex animations & graphics</span>
+            </li>
+            <li className="flex items-start">
+              <CheckCircle className="h-4 w-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+              <span>Platform-specific features required</span>
+            </li>
+          </ul>
+        </div>
+        <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-lg p-6 border border-purple-200">
+          <h3 className="text-lg font-semibold text-gray-900 mb-3">Choose Cross-Platform When:</h3>
+          <ul className="space-y-2 text-sm text-gray-600">
+            <li className="flex items-start">
+              <CheckCircle className="h-4 w-4 text-purple-500 mr-2 mt-0.5 flex-shrink-0" />
+              <span>Faster time-to-market needed</span>
+            </li>
+            <li className="flex items-start">
+              <CheckCircle className="h-4 w-4 text-purple-500 mr-2 mt-0.5 flex-shrink-0" />
+              <span>Budget optimization is priority</span>
+            </li>
+            <li className="flex items-start">
+              <CheckCircle className="h-4 w-4 text-purple-500 mr-2 mt-0.5 flex-shrink-0" />
+              <span>Single codebase for both platforms</span>
+            </li>
+            <li className="flex items-start">
+              <CheckCircle className="h-4 w-4 text-purple-500 mr-2 mt-0.5 flex-shrink-0" />
+              <span>Consistent UI across platforms</span>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
@@ -168,25 +322,25 @@ const SoftwareDevelopmentDetail: React.FC<SoftwareDevelopmentDetailProps> = ({ i
           <line x1="710" y1="130" x2="410" y2="180" stroke="#6b7280" strokeWidth="2" markerEnd="url(#arrowhead)" strokeDasharray="5,5" />
           
           {/* Detailed Activities */}
-          <rect x="50" y="320" width="700" height="250" fill="#f8fafc" stroke="#e2e8f0" strokeWidth="1" rx="8" />
+          <rect x="30" y="320" width="740" height="250" fill="#f8fafc" stroke="#e2e8f0" strokeWidth="1" rx="8" />
           <text x="400" y="345" textAnchor="middle" className="fill-gray-900 text-lg font-semibold">Phase Activities & Deliverables</text>
-          
+
           {/* Planning Details */}
-          <rect x="70" y="360" width="130" height="180" fill="#ffffff" stroke="#ec4899" strokeWidth="1" rx="4" />
-          <text x="135" y="380" textAnchor="middle" className="fill-gray-900 text-sm font-semibold">Planning</text>
-          <text x="75" y="400" className="fill-gray-600 text-xs">• Requirements gathering</text>
-          <text x="75" y="415" className="fill-gray-600 text-xs">• Stakeholder analysis</text>
-          <text x="75" y="430" className="fill-gray-600 text-xs">• Project scope definition</text>
-          <text x="75" y="445" className="fill-gray-600 text-xs">• Timeline estimation</text>
-          <text x="75" y="460" className="fill-gray-600 text-xs">• Risk assessment</text>
-          <text x="75" y="475" className="fill-gray-600 text-xs">• Resource planning</text>
-          <text x="75" y="495" className="fill-gray-800 text-xs font-medium">Deliverables:</text>
-          <text x="75" y="510" className="fill-gray-600 text-xs">• Project charter</text>
-          <text x="75" y="525" className="fill-gray-600 text-xs">• Requirements document</text>
-          
+          <rect x="45" y="360" width="165" height="180" fill="#ffffff" stroke="#ec4899" strokeWidth="1" rx="4" />
+          <text x="127" y="380" textAnchor="middle" className="fill-gray-900 text-sm font-semibold">Planning</text>
+          <text x="50" y="400" className="fill-gray-600 text-xs">• Requirements gathering</text>
+          <text x="50" y="415" className="fill-gray-600 text-xs">• Stakeholder analysis</text>
+          <text x="50" y="430" className="fill-gray-600 text-xs">• Project scope definition</text>
+          <text x="50" y="445" className="fill-gray-600 text-xs">• Timeline estimation</text>
+          <text x="50" y="460" className="fill-gray-600 text-xs">• Risk assessment</text>
+          <text x="50" y="475" className="fill-gray-600 text-xs">• Resource planning</text>
+          <text x="50" y="495" className="fill-gray-800 text-xs font-medium">Deliverables:</text>
+          <text x="50" y="510" className="fill-gray-600 text-xs">• Project charter</text>
+          <text x="50" y="525" className="fill-gray-600 text-xs">• Requirements document</text>
+
           {/* Design Details */}
-          <rect x="220" y="360" width="130" height="180" fill="#ffffff" stroke="#0ea5e9" strokeWidth="1" rx="4" />
-          <text x="285" y="380" textAnchor="middle" className="fill-gray-900 text-sm font-semibold">Design</text>
+          <rect x="220" y="360" width="165" height="180" fill="#ffffff" stroke="#0ea5e9" strokeWidth="1" rx="4" />
+          <text x="302" y="380" textAnchor="middle" className="fill-gray-900 text-sm font-semibold">Design</text>
           <text x="225" y="400" className="fill-gray-600 text-xs">• System architecture</text>
           <text x="225" y="415" className="fill-gray-600 text-xs">• Database design</text>
           <text x="225" y="430" className="fill-gray-600 text-xs">• UI/UX wireframes</text>
@@ -196,32 +350,32 @@ const SoftwareDevelopmentDetail: React.FC<SoftwareDevelopmentDetailProps> = ({ i
           <text x="225" y="495" className="fill-gray-800 text-xs font-medium">Deliverables:</text>
           <text x="225" y="510" className="fill-gray-600 text-xs">• Architecture diagrams</text>
           <text x="225" y="525" className="fill-gray-600 text-xs">• Design mockups</text>
-          
+
           {/* Development Details */}
-          <rect x="370" y="360" width="130" height="180" fill="#ffffff" stroke="#10b981" strokeWidth="1" rx="4" />
-          <text x="435" y="380" textAnchor="middle" className="fill-gray-900 text-sm font-semibold">Development</text>
-          <text x="375" y="400" className="fill-gray-600 text-xs">• Code implementation</text>
-          <text x="375" y="415" className="fill-gray-600 text-xs">• Unit testing</text>
-          <text x="375" y="430" className="fill-gray-600 text-xs">• Code reviews</text>
-          <text x="375" y="445" className="fill-gray-600 text-xs">• Integration testing</text>
-          <text x="375" y="460" className="fill-gray-600 text-xs">• Documentation</text>
-          <text x="375" y="475" className="fill-gray-600 text-xs">• Version control</text>
-          <text x="375" y="495" className="fill-gray-800 text-xs font-medium">Deliverables:</text>
-          <text x="375" y="510" className="fill-gray-600 text-xs">• Source code</text>
-          <text x="375" y="525" className="fill-gray-600 text-xs">• Technical docs</text>
-          
+          <rect x="395" y="360" width="165" height="180" fill="#ffffff" stroke="#10b981" strokeWidth="1" rx="4" />
+          <text x="477" y="380" textAnchor="middle" className="fill-gray-900 text-sm font-semibold">Development</text>
+          <text x="400" y="400" className="fill-gray-600 text-xs">• Code implementation</text>
+          <text x="400" y="415" className="fill-gray-600 text-xs">• Unit testing</text>
+          <text x="400" y="430" className="fill-gray-600 text-xs">• Code reviews</text>
+          <text x="400" y="445" className="fill-gray-600 text-xs">• Integration testing</text>
+          <text x="400" y="460" className="fill-gray-600 text-xs">• Documentation</text>
+          <text x="400" y="475" className="fill-gray-600 text-xs">• Version control</text>
+          <text x="400" y="495" className="fill-gray-800 text-xs font-medium">Deliverables:</text>
+          <text x="400" y="510" className="fill-gray-600 text-xs">• Source code</text>
+          <text x="400" y="525" className="fill-gray-600 text-xs">• Technical docs</text>
+
           {/* Testing Details */}
-          <rect x="520" y="360" width="130" height="180" fill="#ffffff" stroke="#f59e0b" strokeWidth="1" rx="4" />
-          <text x="585" y="380" textAnchor="middle" className="fill-gray-900 text-sm font-semibold">Testing</text>
-          <text x="525" y="400" className="fill-gray-600 text-xs">• System testing</text>
-          <text x="525" y="415" className="fill-gray-600 text-xs">• Performance testing</text>
-          <text x="525" y="430" className="fill-gray-600 text-xs">• Security testing</text>
-          <text x="525" y="445" className="fill-gray-600 text-xs">• User acceptance</text>
-          <text x="525" y="460" className="fill-gray-600 text-xs">• Bug fixing</text>
-          <text x="525" y="475" className="fill-gray-600 text-xs">• Regression testing</text>
-          <text x="525" y="495" className="fill-gray-800 text-xs font-medium">Deliverables:</text>
-          <text x="525" y="510" className="fill-gray-600 text-xs">• Test reports</text>
-          <text x="525" y="525" className="fill-gray-600 text-xs">• Bug reports</text>
+          <rect x="570" y="360" width="165" height="180" fill="#ffffff" stroke="#f59e0b" strokeWidth="1" rx="4" />
+          <text x="652" y="380" textAnchor="middle" className="fill-gray-900 text-sm font-semibold">Testing</text>
+          <text x="575" y="400" className="fill-gray-600 text-xs">• System testing</text>
+          <text x="575" y="415" className="fill-gray-600 text-xs">• Performance testing</text>
+          <text x="575" y="430" className="fill-gray-600 text-xs">• Security testing</text>
+          <text x="575" y="445" className="fill-gray-600 text-xs">• User acceptance</text>
+          <text x="575" y="460" className="fill-gray-600 text-xs">• Bug fixing</text>
+          <text x="575" y="475" className="fill-gray-600 text-xs">• Regression testing</text>
+          <text x="575" y="495" className="fill-gray-800 text-xs font-medium">Deliverables:</text>
+          <text x="575" y="510" className="fill-gray-600 text-xs">• Test reports</text>
+          <text x="575" y="525" className="fill-gray-600 text-xs">• Bug reports</text>
         </svg>
       </div>
 
@@ -672,20 +826,23 @@ const SoftwareDevelopmentDetail: React.FC<SoftwareDevelopmentDetailProps> = ({ i
           <rect x="50" y="180" width="700" height="100" fill="#f0f9ff" stroke="#0ea5e9" strokeWidth="2" rx="8" />
           <text x="400" y="210" textAnchor="middle" className="fill-gray-900 text-lg font-semibold">Backend Layer</text>
           
-          <rect x="80" y="240" width="120" height="30" fill="#dbeafe" stroke="#3b82f6" strokeWidth="1" rx="4" />
-          <text x="140" y="260" textAnchor="middle" className="fill-gray-800 text-xs font-medium">.NET 9 + C#</text>
-          
-          <rect x="220" y="240" width="120" height="30" fill="#dbeafe" stroke="#3b82f6" strokeWidth="1" rx="4" />
-          <text x="280" y="260" textAnchor="middle" className="fill-gray-800 text-xs font-medium">Clean Architecture</text>
-          
-          <rect x="360" y="240" width="120" height="30" fill="#dbeafe" stroke="#3b82f6" strokeWidth="1" rx="4" />
-          <text x="420" y="260" textAnchor="middle" className="fill-gray-800 text-xs font-medium">CQRS + MediatR</text>
-          
-          <rect x="500" y="240" width="120" height="30" fill="#dbeafe" stroke="#3b82f6" strokeWidth="1" rx="4" />
-          <text x="560" y="260" textAnchor="middle" className="fill-gray-800 text-xs font-medium">FastAPI</text>
-          
-          <rect x="640" y="240" width="80" height="30" fill="#dbeafe" stroke="#3b82f6" strokeWidth="1" rx="4" />
-          <text x="680" y="260" textAnchor="middle" className="fill-gray-800 text-xs font-medium">JWT Auth</text>
+          <rect x="80" y="240" width="100" height="30" fill="#dbeafe" stroke="#3b82f6" strokeWidth="1" rx="4" />
+          <text x="130" y="260" textAnchor="middle" className="fill-gray-800 text-xs font-medium">.NET C# 8/9/10</text>
+
+          <rect x="190" y="240" width="100" height="30" fill="#dbeafe" stroke="#3b82f6" strokeWidth="1" rx="4" />
+          <text x="240" y="260" textAnchor="middle" className="fill-gray-800 text-xs font-medium">Python FastAPI</text>
+
+          <rect x="300" y="240" width="100" height="30" fill="#dbeafe" stroke="#3b82f6" strokeWidth="1" rx="4" />
+          <text x="350" y="260" textAnchor="middle" className="fill-gray-800 text-xs font-medium">Clean Arch</text>
+
+          <rect x="410" y="240" width="100" height="30" fill="#dbeafe" stroke="#3b82f6" strokeWidth="1" rx="4" />
+          <text x="460" y="260" textAnchor="middle" className="fill-gray-800 text-xs font-medium">CQRS + MediatR</text>
+
+          <rect x="520" y="240" width="100" height="30" fill="#dbeafe" stroke="#3b82f6" strokeWidth="1" rx="4" />
+          <text x="570" y="260" textAnchor="middle" className="fill-gray-800 text-xs font-medium">Node.js</text>
+
+          <rect x="630" y="240" width="90" height="30" fill="#dbeafe" stroke="#3b82f6" strokeWidth="1" rx="4" />
+          <text x="675" y="260" textAnchor="middle" className="fill-gray-800 text-xs font-medium">JWT Auth</text>
           
           {/* Database Layer */}
           <rect x="50" y="310" width="700" height="100" fill="#f0fdf4" stroke="#10b981" strokeWidth="2" rx="8" />
@@ -771,11 +928,12 @@ const SoftwareDevelopmentDetail: React.FC<SoftwareDevelopmentDetailProps> = ({ i
           </h3>
           <div className="space-y-3">
             <div className="bg-white rounded-lg p-3 border border-blue-200">
-              <h4 className="font-medium text-gray-900">.NET Ecosystem</h4>
+              <h4 className="font-medium text-gray-900">.NET & Python</h4>
               <div className="flex flex-wrap gap-1 mt-2">
-                <span className="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded">.NET 9</span>
-                <span className="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded">C#</span>
+                <span className="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded">C# 8/9/10</span>
                 <span className="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded">ASP.NET Core</span>
+                <span className="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded">Python</span>
+                <span className="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded">FastAPI</span>
               </div>
             </div>
             <div className="bg-white rounded-lg p-3 border border-blue-200">
@@ -900,9 +1058,9 @@ const SoftwareDevelopmentDetail: React.FC<SoftwareDevelopmentDetailProps> = ({ i
         {/* Content */}
         <div className="p-6 overflow-y-auto max-h-[calc(90vh-200px)]">
           {activeTab === 'overview' && renderOverview()}
+          {activeTab === 'mobile' && renderMobile()}
           {activeTab === 'sdlc' && renderSDLC()}
           {activeTab === 'agile' && renderAgile()}
-          {activeTab === 'uxui' && renderUXUI()}
           {activeTab === 'techstack' && renderTechStack()}
         </div>
       </div>

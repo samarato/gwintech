@@ -1,17 +1,55 @@
 import React, { useState } from 'react';
-import { Cloud, Code, Users, Brain, ArrowRight, Zap, Shield, Database, MessageSquare } from 'lucide-react';
+import { Cloud, Code, Users, Brain, ArrowRight, Zap, Shield, Database, MessageSquare, ExternalLink } from 'lucide-react';
 import InfrastructureDetail from './InfrastructureDetail';
 import AIConsultingDetail from './AIConsultingDetail';
 import SoftwareDevelopmentDetail from './SoftwareDevelopmentDetail';
 import MojiChatDetail from './MojiChatDetail';
+import CybiriDetail from './CybiriDetail';
 
 const Services: React.FC = () => {
   const [isInfraModalOpen, setIsInfraModalOpen] = useState(false);
   const [isAIModalOpen, setIsAIModalOpen] = useState(false);
   const [isSoftwareModalOpen, setIsSoftwareModalOpen] = useState(false);
   const [isMojiChatModalOpen, setIsMojiChatModalOpen] = useState(false);
+  const [isCybiriModalOpen, setIsCybiriModalOpen] = useState(false);
 
   const services = [
+    {
+      icon: MessageSquare,
+      title: "MojiChat AI Chatbot",
+      description: "Enterprise-grade omnichannel AI chatbot platform with unified inbox for LINE OA, Facebook, Instagram, TikTok, Shopee, Telegram, WhatsApp, and Web Widget. Manage all customer conversations from one dashboard with AI-powered responses.",
+      features: [
+        "Unified Inbox (LINE, FB, IG, TikTok, Shopee, WhatsApp, Telegram)",
+        "AI Knowledge Base & RAG Pipeline",
+        "Visual Flow Builder & Workflow Automation",
+        "Real-time Analytics & CSAT Tracking",
+        "Team Collaboration & Agent Assignment"
+      ],
+      gradient: "from-indigo-500 to-purple-500",
+      bgGradient: "from-indigo-50 to-purple-50",
+      borderColor: "border-indigo-200",
+      onLearnMore: () => setIsMojiChatModalOpen(true),
+      externalLink: "https://mojichat.co",
+      customIcon: "/icons/mojiChatIcon.png"
+    },
+    {
+      icon: Shield,
+      title: "Cybiri Security Platform",
+      description: "Enterprise-grade Cybersecurity SaaS Platform unifying 7 security domains: Automated Pentesting, Attack Surface Management, Vulnerability Management, AI Security Engine, SOAR, UEBA, and Multi-cloud Compliance. Security for Everyone.",
+      features: [
+        "Automated Pentesting (DAST, SAST, SCA, API Security)",
+        "AI DevFix - Auto Remediation Code Generation",
+        "Attack Surface Management & Asset Discovery",
+        "SOAR & Incident Response Automation",
+        "DevSecOps CI/CD Integration (GitHub, GitLab, Azure)"
+      ],
+      gradient: "from-emerald-500 to-teal-500",
+      bgGradient: "from-emerald-50 to-teal-50",
+      borderColor: "border-emerald-200",
+      onLearnMore: () => setIsCybiriModalOpen(true),
+      externalLink: "https://cybiri.com",
+      customIcon: "/icons/Logo_Cybiri.png"
+    },
     {
       icon: Cloud,
       title: "Infrastructure Consulting",
@@ -31,12 +69,12 @@ const Services: React.FC = () => {
     {
       icon: Code,
       title: "Software Development",
-      description: "Full-stack development services with modern technologies, agile methodologies, and scalable architecture design for web and mobile applications.",
+      description: "Full-stack development services with modern technologies including .NET C# 8-10, Python, React, and mobile apps. We build native iOS/Android and cross-platform solutions with Flutter and React Native.",
       features: [
-        "React & Next.js Development",
-        "Node.js & Python Backend",
-        "Database Design & Optimization",
-        "API Development & Integration",
+        "React, Next.js & Vue.js Frontend",
+        ".NET C# 8/9/10, Python & Node.js Backend",
+        "Native iOS (Swift) & Android (Kotlin)",
+        "Cross-Platform (Flutter, React Native)",
         "DevOps & CI/CD Pipeline"
       ],
       gradient: "from-purple-500 to-pink-500",
@@ -74,22 +112,6 @@ const Services: React.FC = () => {
       bgGradient: "from-orange-50 to-red-50",
       borderColor: "border-orange-200",
       onLearnMore: () => setIsAIModalOpen(true)
-    },
-    {
-      icon: MessageSquare,
-      title: "MojiChat AI Chatbot",
-      description: "Omnichannel AI chatbot platform connecting LINE OA, Facebook, Instagram, TikTok, Shopee, Telegram, and Web Widget. Deliver intelligent, automated customer engagement across all your channels.",
-      features: [
-        "Multi-Platform Integration (LINE, FB, IG, TikTok, Shopee)",
-        "Intelligent AI Conversations (LangChain)",
-        "Unified Customer Management",
-        "Real-time Analytics Dashboard",
-        "24/7 Automated Support"
-      ],
-      gradient: "from-indigo-500 to-purple-500",
-      bgGradient: "from-indigo-50 to-purple-50",
-      borderColor: "border-indigo-200",
-      onLearnMore: () => setIsMojiChatModalOpen(true)
     }
   ];
 
@@ -109,24 +131,25 @@ const Services: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {services.map((service, index) => {
             const Icon = service.icon;
-            const isMojiChat = service.title === "MojiChat AI Chatbot";
             return (
               <div
                 key={index}
                 className={`bg-gradient-to-br ${service.bgGradient} p-6 md:p-8 rounded-xl border ${service.borderColor} hover:shadow-lg transition-all duration-300 md:hover:scale-105`}
               >
                 <div className="flex items-center mb-6 flex-wrap">
-                  <div className={`p-3 rounded-lg bg-gradient-to-r ${service.gradient} mr-3 md:mr-4 flex items-center justify-center flex-shrink-0`}>
-                    {isMojiChat ? (
+                  {service.customIcon ? (
+                    <div className="rounded-lg mr-3 md:mr-4 flex items-center justify-center flex-shrink-0 overflow-hidden">
                       <img
-                        src="/icons/mojiChatIcon.png"
-                        alt="MojiChat"
-                        className="h-8 w-8 object-contain"
+                        src={service.customIcon}
+                        alt={service.title}
+                        className="h-14 w-14 object-contain"
                       />
-                    ) : (
+                    </div>
+                  ) : (
+                    <div className={`p-3 rounded-lg bg-gradient-to-r ${service.gradient} mr-3 md:mr-4 flex items-center justify-center flex-shrink-0`}>
                       <Icon className="h-8 w-8 text-white" />
-                    )}
-                  </div>
+                    </div>
+                  )}
                   <h3 className="text-xl md:text-2xl font-bold text-gray-900 break-words">{service.title}</h3>
                 </div>
                 
@@ -143,14 +166,29 @@ const Services: React.FC = () => {
                   ))}
                 </div>
                 
-                {service.onLearnMore && (
-                  <button
-                    onClick={service.onLearnMore}
-                    className="inline-flex items-center px-6 py-3 bg-white text-gray-900 rounded-lg font-semibold hover:bg-gray-50 transition-colors border border-gray-200 group"
-                  >
-                    Learn More
-                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                  </button>
+                {(service.onLearnMore || service.externalLink) && (
+                  <div className="flex flex-wrap gap-3">
+                    {service.onLearnMore && (
+                      <button
+                        onClick={service.onLearnMore}
+                        className="inline-flex items-center px-6 py-3 bg-white text-gray-900 rounded-lg font-semibold hover:bg-gray-50 transition-colors border border-gray-200 group"
+                      >
+                        Learn More
+                        <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                      </button>
+                    )}
+                    {service.externalLink && (
+                      <a
+                        href={service.externalLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`inline-flex items-center px-6 py-3 bg-gradient-to-r ${service.gradient} text-white rounded-lg font-semibold hover:opacity-90 transition-opacity group`}
+                      >
+                        Visit
+                        <ExternalLink className="ml-2 h-4 w-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                      </a>
+                    )}
+                  </div>
                 )}
               </div>
             );
@@ -194,6 +232,11 @@ const Services: React.FC = () => {
       <MojiChatDetail
         isOpen={isMojiChatModalOpen}
         onClose={() => setIsMojiChatModalOpen(false)}
+      />
+
+      <CybiriDetail
+        isOpen={isCybiriModalOpen}
+        onClose={() => setIsCybiriModalOpen(false)}
       />
     </section>
   );

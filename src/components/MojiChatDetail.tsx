@@ -13,7 +13,8 @@ import {
   Settings,
   TrendingUp,
   Clock,
-  MessageSquare
+  MessageSquare,
+  ExternalLink
 } from 'lucide-react'
 
 interface MojiChatDetailProps {
@@ -90,8 +91,8 @@ const MojiChatDetail: React.FC<MojiChatDetailProps> = ({ isOpen, onClose }) => {
 
   const integrations = [
     'LINE Official Account', 'Facebook Messenger', 'Instagram DM', 'TikTok',
-    'Shopee Chat', 'Telegram', 'Web Widget', 'WhatsApp',
-    'WeChat', 'Viber', 'CRM Systems', 'E-commerce Platforms'
+    'Shopee Chat', 'Telegram', 'Web Widget', 'WhatsApp Business',
+    'Google Sheets', 'CRM Systems', 'E-commerce Platforms', 'Custom API'
   ]
 
   const techStack = [
@@ -405,12 +406,21 @@ const MojiChatDetail: React.FC<MojiChatDetailProps> = ({ isOpen, onClose }) => {
                     Get started with a free consultation and see how MojiChat can transform your customer engagement.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
-                    <button className="bg-white text-indigo-600 font-semibold py-3 px-6 rounded-full hover:bg-gray-100 transition-colors">
+                    <a
+                      href="https://mojichat.co"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center bg-white text-indigo-600 font-semibold py-3 px-6 rounded-full hover:bg-gray-100 transition-colors"
+                    >
+                      Visit MojiChat
+                      <ExternalLink className="ml-2 h-4 w-4" />
+                    </a>
+                    <a
+                      href="#contact"
+                      className="border-2 border-white text-white font-semibold py-3 px-6 rounded-full hover:bg-white hover:text-indigo-600 transition-colors text-center"
+                    >
                       Schedule Demo
-                    </button>
-                    <button className="border-2 border-white text-white font-semibold py-3 px-6 rounded-full hover:bg-white hover:text-indigo-600 transition-colors">
-                      View Documentation
-                    </button>
+                    </a>
                   </div>
                 </div>
               </motion.div>

@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { ArrowRight, Cloud, Code, Users, Brain, MessageSquare } from 'lucide-react'
+import { ArrowRight, Cloud, Code, Users, Brain, MessageSquare, Shield } from 'lucide-react'
 
 const Hero: React.FC = () => {
   const services = [
@@ -8,7 +8,8 @@ const Hero: React.FC = () => {
     { icon: Code, text: 'Software Development' },
     { icon: Users, text: 'IT Outsourcing' },
     { icon: Brain, text: 'AI Consulting' },
-    { icon: MessageSquare, text: 'MojiChat AI Chatbot' },
+    { icon: MessageSquare, text: 'MojiChat AI Chatbot', customIcon: '/icons/mojiChatIcon.png' },
+    { icon: Shield, text: 'Cybiri Security', customIcon: '/icons/Logo_Cybiri.png' },
   ]
 
   return (
@@ -48,31 +49,28 @@ const Hero: React.FC = () => {
             className="mb-8 md:mb-12"
           >
             <div className="flex flex-wrap justify-center gap-2 sm:gap-3 md:gap-4 lg:gap-6 px-2">
-              {services.map((service, index) => {
-                const isMojiChat = service.text === 'MojiChat AI Chatbot';
-                return (
-                  <motion.div
-                    key={service.text}
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
-                    className="flex items-center space-x-1.5 sm:space-x-2 bg-white/80 backdrop-blur-sm rounded-full px-2.5 sm:px-3 md:px-4 py-1.5 sm:py-2 shadow-lg"
-                  >
-                    {isMojiChat ? (
-                      <img
-                        src="/icons/mojiChatIcon.png"
-                        alt="MojiChat"
-                        className="w-4 h-4 sm:w-5 sm:h-5 object-contain flex-shrink-0"
-                      />
-                    ) : (
-                      <service.icon className="w-4 h-4 sm:w-5 sm:h-5 text-primary-600 flex-shrink-0" />
-                    )}
-                    <span className="text-xs sm:text-sm md:text-base font-medium text-gray-700 whitespace-nowrap">
-                      {service.text}
-                    </span>
-                  </motion.div>
-                );
-              })}
+              {services.map((service, index) => (
+                <motion.div
+                  key={service.text}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
+                  className="flex items-center space-x-1.5 sm:space-x-2 bg-white/80 backdrop-blur-sm rounded-full px-2.5 sm:px-3 md:px-4 py-1.5 sm:py-2 shadow-lg"
+                >
+                  {service.customIcon ? (
+                    <img
+                      src={service.customIcon}
+                      alt={service.text}
+                      className="w-4 h-4 sm:w-5 sm:h-5 object-contain flex-shrink-0"
+                    />
+                  ) : (
+                    <service.icon className="w-4 h-4 sm:w-5 sm:h-5 text-primary-600 flex-shrink-0" />
+                  )}
+                  <span className="text-xs sm:text-sm md:text-base font-medium text-gray-700 whitespace-nowrap">
+                    {service.text}
+                  </span>
+                </motion.div>
+              ))}
             </div>
           </motion.div>
 
