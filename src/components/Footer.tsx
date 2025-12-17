@@ -1,15 +1,13 @@
 import React from 'react'
-import { Mail, Phone, MapPin, Twitter, Linkedin, Github } from 'lucide-react'
+import { Mail, Phone, MapPin, Twitter, Linkedin, Github, ExternalLink } from 'lucide-react'
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear()
 
   const footerLinks = {
-    services: [
-      { name: 'Infrastructure Consulting', href: '#services' },
-      { name: 'Software Development', href: '#services' },
-      { name: 'IT Outsourcing', href: '#services' },
-      { name: 'AI Consulting', href: '#services' },
+    products: [
+      { name: 'MojiChat', href: 'https://mojichat.co', external: true },
+      { name: 'Cybiri', href: 'https://cybiri.com', external: true },
     ],
     company: [
       { name: 'About Us', href: '#about' },
@@ -47,12 +45,13 @@ const Footer: React.FC = () => {
                 GWIN TECH
               </span>
             </div>
-            
+
             <p className="text-gray-300 mb-6 max-w-md">
-              GWIN TECH CO., LTD. delivers professional IT services including infrastructure consulting,
-              software development, IT outsourcing, and AI solutions to accelerate your digital transformation.
+              GWIN TECH CO., LTD. is a SaaS company building enterprise-grade platforms for
+              customer engagement and cybersecurity. Our products MojiChat and Cybiri help
+              businesses scale and stay secure.
             </p>
-            
+
             <div className="space-y-3">
               <div className="flex items-center space-x-3 text-gray-300">
                 <Mail className="w-5 h-5 flex-shrink-0" />
@@ -69,17 +68,22 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
-          {/* Services */}
+          {/* Products */}
           <div>
-            <h3 className="text-lg font-bold mb-6">Services</h3>
+            <h3 className="text-lg font-bold mb-6">Products</h3>
             <ul className="space-y-3">
-              {footerLinks.services.map((link) => (
+              {footerLinks.products.map((link) => (
                 <li key={link.name}>
                   <a
                     href={link.href}
-                    className="text-gray-300 hover:text-white transition-colors duration-200"
+                    target={link.external ? '_blank' : undefined}
+                    rel={link.external ? 'noopener noreferrer' : undefined}
+                    className="text-gray-300 hover:text-white transition-colors duration-200 inline-flex items-center group"
                   >
                     {link.name}
+                    {link.external && (
+                      <ExternalLink className="w-3 h-3 ml-1 opacity-50 group-hover:opacity-100" />
+                    )}
                   </a>
                 </li>
               ))}
@@ -127,7 +131,7 @@ const Footer: React.FC = () => {
             <div className="text-gray-400 text-sm">
               © {currentYear} GWIN TECH CO., LTD. All rights reserved.
             </div>
-            
+
             <div className="flex items-center space-x-6">
               <div className="flex items-center space-x-4">
                 {socialLinks.map((social) => (
@@ -149,4 +153,4 @@ const Footer: React.FC = () => {
   )
 }
 
-export default Footer 
+export default Footer

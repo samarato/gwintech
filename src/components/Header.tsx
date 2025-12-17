@@ -16,7 +16,7 @@ const Header: React.FC = () => {
 
   const navItems = [
     { name: 'Home', href: '#home' },
-    { name: 'Services', href: '#services' },
+    { name: 'Products', href: '#services' },
     { name: 'About', href: '#about' },
     { name: 'Features', href: '#features' },
     { name: 'Contact', href: '#contact' },

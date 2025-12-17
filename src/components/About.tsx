@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { Heart, Sparkles, Globe, Users } from 'lucide-react'
+import { Rocket, Sparkles, Target, TrendingUp } from 'lucide-react'
 
 const About: React.FC = () => {
   const [ref, inView] = useInView({
@@ -11,24 +11,24 @@ const About: React.FC = () => {
 
   const values = [
     {
-      icon: Heart,
-      title: 'Passion for Excellence',
-      description: 'We pour our hearts into every project, ensuring the highest quality standards.',
+      icon: Rocket,
+      title: 'Product-First',
+      description: 'We build SaaS products that solve real business problems at scale.',
     },
     {
       icon: Sparkles,
-      title: 'Innovation with Charm',
-      description: 'Combining cutting-edge technology with delightful user experiences.',
+      title: 'AI-Powered',
+      description: 'Leveraging cutting-edge AI to deliver intelligent, automated solutions.',
     },
     {
-      icon: Globe,
-      title: 'Global Perspective',
-      description: 'Bringing international best practices to local and global markets.',
+      icon: Target,
+      title: 'Customer Success',
+      description: 'Your success is our success. We measure our impact by your growth.',
     },
     {
-      icon: Users,
-      title: 'Client Partnership',
-      description: 'Building long-term relationships based on trust and mutual success.',
+      icon: TrendingUp,
+      title: 'Continuous Innovation',
+      description: 'Constantly evolving our platforms with new features and capabilities.',
     },
   ]
 
@@ -43,36 +43,40 @@ const About: React.FC = () => {
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8 }}
           >
+            <span className="inline-block px-4 py-2 bg-gradient-to-r from-moe-pink/10 to-moe-purple/10 rounded-full text-moe-pink font-semibold text-sm mb-4">
+              ABOUT US
+            </span>
             <h2 className="text-3xl md:text-5xl font-display font-bold mb-6">
-              About{' '}
-              <span className="gradient-text">GWIN TECH</span>
+              We Build{' '}
+              <span className="gradient-text">SaaS Products</span>
+              {' '}That Scale
             </h2>
-            
+
             <div className="space-y-6 text-lg text-gray-600">
               <p>
-                <strong>GWIN TECH CO., LTD.</strong> is a professional IT services company headquartered in Bangkok, Thailand,
-                dedicated to delivering innovative technology solutions that drive business success.
+                <strong>GWIN TECH CO., LTD.</strong> is a SaaS company headquartered in Bangkok, Thailand,
+                focused on building enterprise-grade software products that transform how businesses operate.
               </p>
 
               <div className="bg-gradient-to-r from-moe-pink/10 to-moe-purple/10 rounded-2xl p-6 border-l-4 border-moe-pink">
                 <h3 className="font-bold text-gray-900 mb-2">Our Mission</h3>
                 <p className="text-gray-700 mb-3">
-                  To empower businesses through cutting-edge technology solutions, combining technical excellence
-                  with strategic insights to accelerate digital transformation.
+                  To democratize enterprise technology by building accessible, powerful SaaS platforms
+                  that enable businesses of all sizes to compete in the digital economy.
                 </p>
               </div>
 
               <div className="bg-gradient-to-r from-moe-blue/10 to-moe-green/10 rounded-2xl p-6 border-l-4 border-moe-blue">
                 <h3 className="font-bold text-gray-900 mb-2">Our Vision</h3>
                 <p className="text-gray-700 mb-3">
-                  To be the leading IT solutions provider in Thailand and the region, recognized for innovation,
-                  reliability, and exceptional client service.
+                  To become the leading SaaS platform provider in Southeast Asia, known for AI-powered
+                  solutions that drive business transformation and growth.
                 </p>
               </div>
 
               <p>
-                Located in the heart of Bangkok's technology district, <strong>GWIN TECH</strong> brings together
-                a team of experienced professionals committed to delivering world-class IT services.
+                Our flagship products, <strong>MojiChat</strong> and <strong>Cybiri</strong>, represent
+                our commitment to solving critical business challenges in customer engagement and cybersecurity.
               </p>
             </div>
           </motion.div>
@@ -86,34 +90,36 @@ const About: React.FC = () => {
           >
             <div className="relative bg-gradient-to-br from-moe-pink/20 via-moe-purple/20 to-moe-blue/20 rounded-3xl p-8 md:p-12">
               <div className="absolute inset-0 bg-white/50 rounded-3xl backdrop-blur-sm"></div>
-              
+
               <div className="relative z-10 text-center">
                 <div className="w-24 h-24 bg-gradient-to-r from-moe-pink to-moe-purple rounded-full flex items-center justify-center mx-auto mb-6 animate-float">
                   <Sparkles className="w-12 h-12 text-white" />
                 </div>
-                
+
                 <h3 className="text-2xl font-display font-bold text-gray-900 mb-4">
-                  Excellence in IT Services
+                  Two Products, One Mission
                 </h3>
 
                 <p className="text-gray-600 mb-8">
-                  We deliver comprehensive IT solutions ranging from infrastructure consulting to AI implementation,
-                  backed by our expertise in enterprise technology and cloud services.
+                  Empowering businesses with AI-driven customer engagement and comprehensive cybersecurity
+                  through our cloud-native SaaS platforms.
                 </p>
-                
+
                 <div className="grid grid-cols-2 gap-4">
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-primary-600">100+</div>
-                    <div className="text-sm text-gray-600">Projects Completed</div>
+                  <div className="text-center p-4 bg-white/70 rounded-xl">
+                    <img src="/icons/mojiChatIcon.png" alt="MojiChat" className="w-12 h-12 mx-auto mb-2" />
+                    <div className="text-sm font-bold text-gray-900">MojiChat</div>
+                    <div className="text-xs text-gray-500">AI Chatbot</div>
                   </div>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-accent-600">50+</div>
-                    <div className="text-sm text-gray-600">Happy Clients</div>
+                  <div className="text-center p-4 bg-white/70 rounded-xl">
+                    <img src="/icons/Logo_Cybiri.png" alt="Cybiri" className="w-12 h-12 mx-auto mb-2" />
+                    <div className="text-sm font-bold text-gray-900">Cybiri</div>
+                    <div className="text-xs text-gray-500">Cybersecurity</div>
                   </div>
                 </div>
               </div>
             </div>
-            
+
             {/* Floating Elements */}
             <div className="absolute -top-4 -right-4 w-8 h-8 bg-moe-yellow rounded-full opacity-60 animate-bounce-slow"></div>
             <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-moe-green rounded-full opacity-60 animate-pulse-slow"></div>
@@ -131,7 +137,7 @@ const About: React.FC = () => {
             Our{' '}
             <span className="gradient-text">Values</span>
           </h3>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
               <motion.div
@@ -155,4 +161,4 @@ const About: React.FC = () => {
   )
 }
 
-export default About 
+export default About
