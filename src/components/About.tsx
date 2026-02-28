@@ -47,36 +47,36 @@ const About: React.FC = () => {
               ABOUT US
             </span>
             <h2 className="text-3xl md:text-5xl font-display font-bold mb-6">
-              We Build{' '}
-              <span className="gradient-text">SaaS Products</span>
-              {' '}That Scale
+              Your{' '}
+              <span className="gradient-text">Technology Partner</span>
+              {' '}for Growth
             </h2>
 
             <div className="space-y-6 text-lg text-gray-600">
               <p>
-                <strong>GWIN TECH CO., LTD.</strong> is a SaaS company headquartered in Bangkok, Thailand,
-                focused on building enterprise-grade software products that transform how businesses operate.
+                <strong>GWIN TECH CO., LTD.</strong> is a software house and SaaS company headquartered in Bangkok, Thailand.
+                We build custom applications, enterprise systems, and AI-powered platforms that transform how businesses operate.
               </p>
 
               <div className="bg-gradient-to-r from-moe-pink/10 to-moe-purple/10 rounded-2xl p-6 border-l-4 border-moe-pink">
                 <h3 className="font-bold text-gray-900 mb-2">Our Mission</h3>
                 <p className="text-gray-700 mb-3">
-                  To democratize enterprise technology by building accessible, powerful SaaS platforms
-                  that enable businesses of all sizes to compete in the digital economy.
+                  To help businesses of all sizes compete in the digital economy — through custom software development,
+                  AI-powered solutions, and enterprise-grade SaaS platforms.
                 </p>
               </div>
 
               <div className="bg-gradient-to-r from-moe-blue/10 to-moe-green/10 rounded-2xl p-6 border-l-4 border-moe-blue">
                 <h3 className="font-bold text-gray-900 mb-2">Our Vision</h3>
                 <p className="text-gray-700 mb-3">
-                  To become the leading SaaS platform provider in Southeast Asia, known for AI-powered
-                  solutions that drive business transformation and growth.
+                  To become the leading software house and SaaS provider in Southeast Asia, known for AI-first
+                  development and delivering solutions that drive real business growth.
                 </p>
               </div>
 
               <p>
-                Our flagship products, <strong>MojiChat</strong> and <strong>Cybiri</strong>, represent
-                our commitment to solving critical business challenges in customer engagement and cybersecurity.
+                We build custom software for clients <strong>and</strong> our own SaaS products — <strong>MojiChat</strong>, <strong>Cybiri</strong>, and <strong>AITaoHoo</strong>.
+                This means we understand product thinking, scalability, and user experience from the inside out.
               </p>
             </div>
           </motion.div>
@@ -97,24 +97,29 @@ const About: React.FC = () => {
                 </div>
 
                 <h3 className="text-2xl font-display font-bold text-gray-900 mb-4">
-                  Two Products, One Mission
+                  Three Products, One Mission
                 </h3>
 
                 <p className="text-gray-600 mb-8">
-                  Empowering businesses with AI-driven customer engagement and comprehensive cybersecurity
-                  through our cloud-native SaaS platforms.
+                  Empowering businesses with AI-driven customer engagement, comprehensive cybersecurity,
+                  and developer-first infrastructure through our cloud-native SaaS platforms.
                 </p>
 
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="text-center p-4 bg-white/70 rounded-xl">
-                    <img src="/icons/mojiChatIcon.png" alt="MojiChat" className="w-12 h-12 mx-auto mb-2" />
+                <div className="grid grid-cols-3 gap-3">
+                  <div className="text-center p-3 bg-white/70 rounded-xl">
+                    <img src="/icons/mojiChatIcon.png" alt="MojiChat" className="w-10 h-10 mx-auto mb-2" />
                     <div className="text-sm font-bold text-gray-900">MojiChat</div>
                     <div className="text-xs text-gray-500">AI Chatbot</div>
                   </div>
-                  <div className="text-center p-4 bg-white/70 rounded-xl">
-                    <img src="/icons/Logo_Cybiri.png" alt="Cybiri" className="w-12 h-12 mx-auto mb-2" />
+                  <div className="text-center p-3 bg-white/70 rounded-xl">
+                    <img src="/icons/Logo_Cybiri.png" alt="Cybiri" className="w-10 h-10 mx-auto mb-2" />
                     <div className="text-sm font-bold text-gray-900">Cybiri</div>
                     <div className="text-xs text-gray-500">Cybersecurity</div>
+                  </div>
+                  <div className="text-center p-3 bg-white/70 rounded-xl">
+                    <img src="/icons/aitaohoo-icon.png" alt="AITaoHoo" className="w-10 h-10 mx-auto mb-2" />
+                    <div className="text-sm font-bold text-gray-900">AITaoHoo</div>
+                    <div className="text-xs text-gray-500">Tunneling</div>
                   </div>
                 </div>
               </div>

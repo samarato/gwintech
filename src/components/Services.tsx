@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import { ArrowRight, ExternalLink } from 'lucide-react';
 import MojiChatDetail from './MojiChatDetail';
 import CybiriDetail from './CybiriDetail';
+import AitaohooDetail from './AitaohooDetail';
 
 const Services: React.FC = () => {
   const [isMojiChatModalOpen, setIsMojiChatModalOpen] = useState(false);
   const [isCybiriModalOpen, setIsCybiriModalOpen] = useState(false);
+  const [isAitaohooModalOpen, setIsAitaohooModalOpen] = useState(false);
 
   const products = [
     {
@@ -53,6 +55,29 @@ const Services: React.FC = () => {
         { label: "Scanning Engines", value: "8" },
         { label: "Monitoring", value: "24/7" }
       ]
+    },
+    {
+      title: "AITaoHoo",
+      tagline: "Self-Hosted Tunneling Platform",
+      description: "Expose your local services to the world through secure, encrypted tunnels. Built with Rust for blazing-fast performance and Next.js for a modern dashboard. Self-hosted architecture keeps your data under your control.",
+      features: [
+        "Custom Subdomains & Persistent URLs",
+        "Automatic TLS Certificates & End-to-End Encryption",
+        "Real-time Traffic & Bandwidth Monitoring",
+        "CLI & Web Dashboard Management",
+        "Self-Hosted with Full Data Ownership"
+      ],
+      gradient: "from-orange-500 to-amber-500",
+      bgGradient: "from-orange-50 to-amber-50",
+      borderColor: "border-orange-200",
+      onLearnMore: () => setIsAitaohooModalOpen(true),
+      externalLink: "https://aitaohoo.com",
+      customIcon: "/icons/aitaohoo-icon.png",
+      stats: [
+        { label: "Setup Time", value: "<1min" },
+        { label: "Backend", value: "Rust" },
+        { label: "Self-Hosted", value: "100%" }
+      ]
     }
   ];
 
@@ -72,7 +97,7 @@ const Services: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
           {products.map((product, index) => (
             <div
               key={index}
@@ -172,6 +197,11 @@ const Services: React.FC = () => {
       <CybiriDetail
         isOpen={isCybiriModalOpen}
         onClose={() => setIsCybiriModalOpen(false)}
+      />
+
+      <AitaohooDetail
+        isOpen={isAitaohooModalOpen}
+        onClose={() => setIsAitaohooModalOpen(false)}
       />
     </section>
   );

@@ -8,10 +8,17 @@ const Footer: React.FC = () => {
     products: [
       { name: 'MojiChat', href: 'https://mojichat.co', external: true },
       { name: 'Cybiri', href: 'https://cybiri.com', external: true },
+      { name: 'AITaoHoo', href: 'https://aitaohoo.com', external: true },
+    ],
+    services: [
+      { name: 'Custom Software', href: '#dev-services' },
+      { name: 'Web Development', href: '#dev-services' },
+      { name: 'Mobile Apps', href: '#dev-services' },
+      { name: 'AI & ML Solutions', href: '#dev-services' },
     ],
     company: [
       { name: 'About Us', href: '#about' },
-      { name: 'Our Values', href: '#about' },
+      { name: 'FAQ', href: '#faq' },
       { name: 'Careers', href: '#' },
       { name: 'Blog', href: '#' },
     ],
@@ -32,7 +39,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-gray-900 text-white overflow-hidden">
       <div className="container-custom py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-3 mb-6">
@@ -47,9 +54,9 @@ const Footer: React.FC = () => {
             </div>
 
             <p className="text-gray-300 mb-6 max-w-md">
-              GWIN TECH CO., LTD. is a SaaS company building enterprise-grade platforms for
-              customer engagement and cybersecurity. Our products MojiChat and Cybiri help
-              businesses scale and stay secure.
+              GWIN TECH CO., LTD. is a software house and SaaS company building custom applications,
+              enterprise systems, and AI-powered platforms. We help businesses build, scale, and secure
+              their digital products.
             </p>
 
             <div className="space-y-3">
@@ -84,6 +91,23 @@ const Footer: React.FC = () => {
                     {link.external && (
                       <ExternalLink className="w-3 h-3 ml-1 opacity-50 group-hover:opacity-100" />
                     )}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Services */}
+          <div>
+            <h3 className="text-lg font-bold mb-6">Services</h3>
+            <ul className="space-y-3">
+              {footerLinks.services.map((link) => (
+                <li key={link.name}>
+                  <a
+                    href={link.href}
+                    className="text-gray-300 hover:text-white transition-colors duration-200"
+                  >
+                    {link.name}
                   </a>
                 </li>
               ))}

@@ -20,11 +20,11 @@ const CTA: React.FC = () => {
           className="text-center max-w-4xl mx-auto"
         >
           <h2 className="text-2xl sm:text-3xl md:text-5xl font-display font-bold mb-4 md:mb-6">
-            Ready to Transform Your Business?
+            Ready to Build Your Next Project?
           </h2>
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-6 md:mb-8 opacity-90 px-4">
-            Join 150+ companies that trust GWIN TECH for their IT transformation.
-            Get a free consultation and see how we can accelerate your growth.
+            Join 150+ businesses that trust Gwin Tech to build their software.
+            Get a free project assessment and custom quote within 24 hours.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-stretch sm:items-center mb-8 md:mb-12 px-4">
